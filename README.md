@@ -23,4 +23,22 @@ This project is a simple web application built with Django that serves as a dash
     source venv/bin/activate
     ```
 
-3. 
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+   
+4. **Database setup (for Django):**
+    ```bash
+    python manage.py migrate
+    ```
+   
+5. **Create a superuser (optional, for admin access):**
+    ```bash
+    python manage.py createsuperuser
+    ```
+# Run the project
+
+```bash
+python manage.py runserver
+ ```
