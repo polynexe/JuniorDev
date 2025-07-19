@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <title>Junior Applicant List</title>
+ <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .dashboard-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 40px auto;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .applicant-card {
+            background-color: #e9f7ef; /* Light green */
+            border: 1px solid #d4edda;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .applicant-info p {
+            margin: 5px 0;
+        }
+        .applicant-info strong {
+            color: #007bff; /* Bootstrap primary blue */
+        }
+        .add-applicant-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #dee2e6; /* Light gray border */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <h1>Junior Applicant List</h1>
+
+        <div class="applicant-card">
+            <div class="applicant-info">
+                <p><strong>First Name:</strong> John</p>
+                <p><strong>Last Name:</strong> Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+            </div>
+            <button class="btn btn-success">View Projects</button>
+        </div>
+
+        <div class="applicant-card">
+            <div class="applicant-info">
+                <p><strong>First Name:</strong> Jane</p>
+                <p><strong>Last Name:</strong> Smith</p>
+                <p><strong>Email:</strong> jane.smith@example.com</p>
+            </div>
+            <button class="btn btn-success">View Projects</button>
+        </div>
+
+        <div class="applicant-card">
+            <div class="applicant-info">
+                <p><strong>First Name:</strong> Peter</p>
+                <p><strong>Last Name:</strong> Jones</p>
+                <p><strong>Email:</strong> peter.jones@example.com</p>
+            </div>
+            <button class="btn btn-success">View Projects</button>
+        </div>
+
+        ---
+
+        <div class="add-applicant-section">
+            <h2>Add New Applicant</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Applicant</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+</html>
